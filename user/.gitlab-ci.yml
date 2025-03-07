@@ -1,0 +1,21 @@
+include:
+  - project: "commons-acp/tools"
+    file: "gitlab-ci/ci-chalice.yml"
+    ref: "master"
+
+  - project: "commons-acp/tools"
+    file: "gitlab-ci/auto-mr.yml"
+    ref: "master"
+
+archiver:
+  stage: deploy
+  variables:
+    ARTIFACT_NAME: "$CI_PROJECT_NAME-$CI_COMMIT_TAG.zip"
+  script:
+    - ls
+    - echo ${VERSION}
+    - aws --version
+    - aws s3 cp ./ s3://024848444223-s3-archive/ --recursive --exclude "*" --include "*.zip"
+    - sha256sum ${VERSION} > "${VERSION}.sha256"
+    - aws s3 cp ./ s3://024848444223-s3-archive/ --recursive --exclude "*" --include "*.sha256"
+

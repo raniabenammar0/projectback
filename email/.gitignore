@@ -1,0 +1,8 @@
+__pycache__
+../.chalice/deployments/
+../.chalice/venv/
+/.idea/
+/.env
+/.aws-sam/
+../bin/
+/venv/

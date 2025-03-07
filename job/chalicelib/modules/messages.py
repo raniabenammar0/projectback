@@ -1,0 +1,11 @@
+class Messages:
+    SUCCESS_ADDED = "Job added successfully."
+    SUCCESS_UPDATED = "Job updated successfully"
+    SUCCESS_DELETED = "Job deleted successfully"
+    ERROR_NOT_FOUND = "Job not found"
+    ERROR_ONE_NOT_FOUND = "No Job found matching the criteria"
+    UNKNOWN_ERROR = "An unexpected error occurred. Please try again."
+    REQUIRED_ID = "ID is required in the request body"
+    JOB_CREATION_ERROR = "Job could not be created or updated."
+    INVALID_BODY ="The JSON body is missing or invalid."
+    REQUIRED_ID_URL = "ID is required in the url"

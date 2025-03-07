@@ -1,0 +1,11 @@
+class Messages:
+    SUCCESS_ADDED = "Team member added successfully."
+    SUCCESS_UPDATED = "Team member updated successfully"
+    SUCCESS_DELETED = "Team member deleted successfully"
+    ERROR_NOT_FOUND = "Team member not found"
+    ERROR_ONE_NOT_FOUND = "No Team member found matching the criteria"
+    UNKNOWN_ERROR = "An unexpected error occurred. Please try again."
+    REQUIRED_ID = "ID is required in the request body"
+    NO_CHANGES = "NO changes detected "
+    INVALID_PAYLOAD = "NO field(s) has been passed"
+    UNAUTHORIZED_FIELDS = "Only 'status' and 'role' are allowed."

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation au Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color:  #ffffff;
+            padding: 20px;
+        }
+        .email-header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
+        .email-content {
+            padding: 30px 20px;
+            color: #333333;
+            text-align: left;
+        }
+        .email-content h2 {
+            color: #ff4702;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .email-content p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .email-content a.button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #ff4702;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .email-footer {
+            background-color: #ff4702;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="{{ logo_path }}" alt="Logo AIRA"
+        </div>
+        <div class="email-content">
+            <h2>{{ invitation_header }}  <strong>{{ project_name }}</strong></h2>
+            <p>{{ greeting }}</p>
+            <p>{{ invitation_body }} <strong>{{ project_name }}</strong>.</p>
+            <p>{{ accept_invitation }}</p>
+            <center>
+                <a href="{{ link }}/{{ id }}" class="button">{{ button_text }}</a>
+            </center>
+            <p style="margin-top: 20px;">{{ ignore_message }}</p>
+        </div>
+        <div class="email-footer">
+            <p>{{ footer_text }}</p>
+        </div>
+    </div>
+    </body>
+</html>
